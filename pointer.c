@@ -1,13 +1,24 @@
 #include<stdio.h>
+struct person
+{
+	int Age;
+	float Weight;
+};
+
 int main()
 {
-	int i, x[5], sum=0;
-	printf("Enter 5 numbers: ");
-	for(i = 0; i<5 ; ++i)
-	{
-		scanf("%d", x+i);
-		sum += *(x+i);
-	}
-	printf("Sum = %d", sum);
-	return 0;
+	struct person *personPtr, person1;
+personPtr = &person1;
+
+printf("Enter Age: ");
+scanf("%d", &personPtr -> Age);
+
+printf("Enter Weight: ");
+scanf("%f", &personPtr -> Weight);
+
+printf("Displaying: \n");
+printf("Age: %d\n", personPtr -> Age);
+printf("Weight: %f", personPtr -> Weight);
+
+return 0;
 }
