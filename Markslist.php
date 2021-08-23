@@ -5,14 +5,14 @@
 $name = array("Sunil","Mayank","Ravi","Amit");
 $Sunil = array("Maths"=>"87","Physics"=>"89","English"=>"98","Hindi"=>"73");
 $S = count($Sunil);
-foreach ($name as $n) {
-echo "Name is ".$n.".";
-echo "<br>";
-foreach($Sunil as $k => $v) {
+$n = count($name);
+do {
+	echo $name[$i];
+    foreach($Sunil as $k => $v){
+    	echo "<br>";
 	echo "Marks in " .$k. " - " .$v. ".";
-	echo "<br>";	
-}
-echo "<br>";
+	echo "<br>";
+while ($i <= $n);
 }
 ?>
 </head>
