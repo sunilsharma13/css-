@@ -1,0 +1,31 @@
+<?php
+$list = array(
+    1 => array(
+        "employee_name" => "Sunil",
+        "salary" => "20k",
+         "age" => "22"   
+    ),
+    2 => array(
+        "employee_name" => "Manish",
+        "salary" => "25k",
+        "age" => "23"   
+    )     
+); 
+echo "<table border='2px' cellpadding='5px'>
+ <tr>
+ <th>employee id</th>
+ <th>employee name</th>
+ <th>employee salary</th>
+ <th>employee age</th>
+
+ </tr>";
+     foreach($list as $key => $value){
+         echo "<tr>
+         <td>$key</td>";
+         foreach($value as $values){
+         echo "<td> $values </td>";
+        }
+       echo "</tr>";
+    }
+    echo "</table>";
+?>
