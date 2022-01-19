@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("a").removeAttr("href");
+            });
+        });
+    </script>
+    <style>
+        a {
+            padding: 10px;
+            font-size: 30px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="">home</a>
+    <a href="">display</a>
+    <button>click on me for disable link </button>
+</body>
+
+</html>
