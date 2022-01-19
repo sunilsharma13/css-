@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).on("contextmenu", ".click", function(){
+          console.log("you clicked right mouse");
+          return false;
+      });
+      $(document).on('click', '.click', function(){
+ console.log("you clicked Left Mouse");
+});
+</script>
+    <style>
+        p{
+            background-color: blueviolet;
+            font-size: 10vmin;
+            width: 570px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="click">
+   <p>hey there click on me</p>
+   </div> 
+    </body>
+
+</html>
