@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".click_more").hide();
+            $(".data").hide();
+        });
+        $(document).ready(function () {
+            $('.click').on("click", function () {
+                $(this).html("WRITE YOUR NAME IN BOX");
+                $(".click_more").hide();
+                $('.data').show();
+            });
+        });
+        $(document).ready(function () {
+            $(".data").on(
+                "click", function () {
+                    $("input").fadeOut(2000);
+                    setInterval: 4000;
+                    $(".data").html("NAME SUBMITTED");
+                    $(".data").fadeOut(5000);
+                    $(".click_more").show();
+                    $(".click").hide();
+                    // $(".data").hide();
+                });
+        });
+        $(document).ready(function () {
+            $(".click_more").on("click", function () {
+                $(".users").show();
+                $(".data").show();
+                $(".data").html("SUBMIT AGAIN");
+                $(".data").fadeIn(5000);
+                $(".data").on("click", function () {
+                    $(".data").html("NAME SUBMITTED AGAIN");
+                });
+            });
+        });
+
+        // $(document).ready(function() {
+        //     $(".users").on("click" , function(){
+        //         var a = "Sunil"; 
+        //     if (Text = "Sunil") {
+        //         return ;
+        //     } else {
+        //         console: "get lost";
+        //         return false;
+        //     }
+        //     });
+        // });
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <button class="click">CLICK HERE</button>
+    <button class="click_more">WANT CHANGE YOUR NAME?</button>
+
+    <div>
+       <br></br>  <input type="text" class="users"><br></br>
+    </div>
+    <button class="data">SEND NAME</button>
+</body>
+
+</html>
