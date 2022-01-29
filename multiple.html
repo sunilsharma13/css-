@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+       $(".input,.input1").keyup(function(){
+            var number1 = Number($(".input").val());
+            var number2 = Number($(".input1").val());
+     var answer = number1 * number2;
+     $(".output").val(answer);
+       });
+            });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <p>type zero in quantity </p>
+   VALUE <input class="input" type="text"></input><br></br>
+    QUANTITY <input class="input1" type="text"></input><br></br>
+    TOTAL <input class="output" type="text"></button>
+    
+</body>
+</html>
