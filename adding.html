@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        function adding_block(){
-$(".adding ul").append("<li>Lokesh</li>");
-}
-    // append('<li>Lokesh</li>')
-    // append('<li>Rohan</li'
+        $(document).ready(function () {
+            $(".add").click(function () {
+            var number1 = parseInt($(".input1").val());
+            var number2 = parseInt($(".input2").val());
+            // var number3 = number1+number2;
+            $(".total").text(number1+number2);
+            // $().html("sum of "+number1+" and "+number2+" is" (+number1 +number2));
+            });
+        });
     </script>
     <style>
     </style>
 </head>
-
 <body>
-    <button onclick="adding_block()">click here to add name</button>
-     <div class="adding">
-     <ul>
-         <li>Sunil</li>
-         <li>Rohit</li>
-         <li>Ramesh</li> 
-       </ul>
-       </div>  
-        </body>
-
+    <input class="input1" type="text"></input>
+    <input class="input2" type="text"></input>
+    <button class="add">ADDING</button>
+    <p>this is the total of these two numbers</p>
+    <p class="total"></p>
+</body>
 </html>
